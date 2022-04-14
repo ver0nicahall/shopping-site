@@ -173,7 +173,7 @@ def process_login():
     #   message and redirect the user to the "/melons" route
     # - if they don't, flash a failure message and redirect back to "/login"
     # - do the same if a Customer with that email doesn't exist
-    return (f'customer by email: , {customer_by_email}')
+    # return (f'customer by email: , {customer_by_email}')
     return "Oops! This needs to be implemented"
 
 
@@ -185,6 +185,11 @@ def checkout():
     # scope of this exercise.
 
     flash("Sorry! Checkout will be implemented in a future version.")
+    return redirect("/melons")
+
+@app.route("/logout")
+def logout():
+    session.clear()
     return redirect("/melons")
 
 

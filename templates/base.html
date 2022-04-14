@@ -15,7 +15,14 @@
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav">
                     <a class="nav-link" href="/cart"> <img class="melon-cart" src="/static/img/watermelon.png">My Melon Cart</a>
+                    {% if not session %}
                     <a class="nav-link" href="/login">Log In</a>
+                    {% endif %}
+ 
+
+                    {% if session %}
+                    <a class= "nav-link" href="/logout">Log out</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
